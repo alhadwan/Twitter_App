@@ -6,6 +6,7 @@
 //  Copyright © 2016 Ali Hadwan. All rights reserved.
 //
 
+
 import UIKit
 
 class TweetsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -14,13 +15,13 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var tableView: UITableView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.dataSource = self
         tableView.delegate = self
-        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 150
         // Do any additional setup after loading the view.
         
         tableView.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
@@ -39,7 +40,6 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     @IBAction func onLogout(sender: AnyObject) {
         User.currentUser!.logout()
         self.dismissViewControllerAnimated(true, completion: nil)
-        
     }
     
     
@@ -51,41 +51,11 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("tableCell", forIndexPath: indexPath) as! TweetsTableViewCell
-        
-        cell.profileImage.setImageWithURL(NSURL(string: tweets![indexPath.row].user!.profileImageUrl!)!)
-        cell.userName.text = tweets![indexPath.row].user!.name!
-        cell.userHandle.text = tweets![indexPath.row].user!.screenname!
-        cell.tweetContentText.text = tweets![indexPath.row].text!
-        cell.createdTime.text = tweets![indexPath.row].createdAtString!
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("TweetsTableViewCell", forIndexPath: indexPath) as! TweetsTableViewCell
+        cell.tweet = tweets![indexPath.row]
+        cell.TimesCreater.text = tweets![indexPath.row].Time!
         return cell
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     
-    
-    
-    
-    
-    //    func testTweets() {
-    ////        let tweet = tweets![0]
-    ////        print(tweet.user!.name)
-    ////        tweet.user?.name
-    ////        tweet.user?.screenname
-    ////        tweet.user?.profileImageUrl
-    ////        tweet.text?
-    ////        tweet.createdAtString?
-    //    }
-
 }

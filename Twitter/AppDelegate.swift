@@ -6,8 +6,9 @@
 //  Copyright © 2016 Ali Hadwan. All rights reserved.
 //
 
+
 import UIKit
-import BDBOAuth1Manager
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -8,7 +8,10 @@
 
 
 import UIKit
+import AFNetworking
 import BDBOAuth1Manager
+
+
 
 class ViewController: UIViewController {
 
@@ -39,18 +42,6 @@ class ViewController: UIViewController {
         }
         
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    //        TwitterClient.sharedInstance.loginWithBlock() {
-    //            // go to next screen
-    //
-    //        }
 
 }
 

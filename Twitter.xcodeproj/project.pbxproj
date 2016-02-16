@@ -71,8 +71,8 @@
 		6520F2D91C67F5F80064A0B1 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
-				65D5E1821C68725200297429 /* ViewControllers */,
 				65D5E1811C68724A00297429 /* Views */,
+				65D5E1821C68725200297429 /* ViewControllers */,
 				658360691C6853E000E9490A /* Models */,
 				65F7F9321C67FC5E00629A70 /* API */,
 				6520F2DA1C67F5F80064A0B1 /* AppDelegate.swift */,
@@ -378,7 +378,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Twitter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codpath.Twitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -392,7 +391,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Twitter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codpath.Twitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
