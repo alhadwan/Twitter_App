@@ -27,7 +27,7 @@
 			<string>com.codpath.Twitter</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>cptwitter</string>
+				<string>cptwitterdemo</string>
 			</array>
 		</dict>
 	</array>

@@ -10,23 +10,23 @@
 		6520F2DB1C67F5F80064A0B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6520F2DA1C67F5F80064A0B1 /* AppDelegate.swift */; };
 		6520F2DD1C67F5F80064A0B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6520F2DC1C67F5F80064A0B1 /* ViewController.swift */; };
 		6520F2E01C67F5F80064A0B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6520F2DE1C67F5F80064A0B1 /* Main.storyboard */; };
-		6520F2E21C67F5F80064A0B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6520F2E11C67F5F80064A0B1 /* Assets.xcassets */; };
 		6520F2E51C67F5F80064A0B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6520F2E31C67F5F80064A0B1 /* LaunchScreen.storyboard */; };
 		6583606B1C68540500E9490A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6583606A1C68540500E9490A /* User.swift */; };
 		6583606D1C68541D00E9490A /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6583606C1C68541D00E9490A /* Tweet.swift */; };
 		65D5E1801C6866F400297429 /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D5E17F1C6866F400297429 /* TweetsViewController.swift */; };
 		65D5E1841C68727800297429 /* TweetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D5E1831C68727800297429 /* TweetsTableViewCell.swift */; };
 		65F7F9381C67FDBA00629A70 /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F7F9371C67FDBA00629A70 /* TwitterClient.swift */; };
+		9B03EA441C766E62006B5BE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B03EA431C766E62006B5BE4 /* Assets.xcassets */; };
 		A267EC9A5D7D175402E8EAD9 /* Pods_Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A068446DF6E53DC24AE66C /* Pods_Twitter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04A068446DF6E53DC24AE66C /* Pods_Twitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C91FDD11C7AE1F800573339 /* Twitter-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Twitter-Bridging-Header.h"; sourceTree = "<group>"; };
 		6520F2D71C67F5F80064A0B1 /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6520F2DA1C67F5F80064A0B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6520F2DC1C67F5F80064A0B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6520F2DF1C67F5F80064A0B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6520F2E11C67F5F80064A0B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6520F2E41C67F5F80064A0B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6520F2E61C67F5F80064A0B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6583606A1C68540500E9490A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -35,6 +35,7 @@
 		65D5E1831C68727800297429 /* TweetsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsTableViewCell.swift; sourceTree = "<group>"; };
 		65F7F9371C67FDBA00629A70 /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
 		87F5B6AD2725DFBC82F62F8F /* Pods-Twitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Twitter/Pods-Twitter.debug.xcconfig"; sourceTree = "<group>"; };
+		9B03EA431C766E62006B5BE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB350CDD7527C7B6EB56A1F9 /* Pods-Twitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twitter/Pods-Twitter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,9 +78,10 @@
 				65F7F9321C67FC5E00629A70 /* API */,
 				6520F2DA1C67F5F80064A0B1 /* AppDelegate.swift */,
 				6520F2DE1C67F5F80064A0B1 /* Main.storyboard */,
-				6520F2E11C67F5F80064A0B1 /* Assets.xcassets */,
 				6520F2E31C67F5F80064A0B1 /* LaunchScreen.storyboard */,
 				6520F2E61C67F5F80064A0B1 /* Info.plist */,
+				9B03EA431C766E62006B5BE4 /* Assets.xcassets */,
+				4C91FDD11C7AE1F800573339 /* Twitter-Bridging-Header.h */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -198,7 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6520F2E51C67F5F80064A0B1 /* LaunchScreen.storyboard in Resources */,
-				6520F2E21C67F5F80064A0B1 /* Assets.xcassets in Resources */,
+				9B03EA441C766E62006B5BE4 /* Assets.xcassets in Resources */,
 				6520F2E01C67F5F80064A0B1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,6 +383,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codpath.Twitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Twitter/Twitter-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -394,6 +397,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codpath.Twitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Twitter/Twitter-Bridging-Header.h";
 			};
 			name = Release;
 		};

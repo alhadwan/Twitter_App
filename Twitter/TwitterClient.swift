@@ -2,7 +2,7 @@
 //  TwitterClient.swift
 //  Twitter
 //
-//  Created by Ali Hadwan on 2/9/16.
+// Created by Ali Hadwan on 2/9/16.
 //  Copyright © 2016 Ali Hadwan. All rights reserved.
 //
 
@@ -79,7 +79,7 @@ class TwitterClient: BDBOAuth1SessionManager {
     func loginWithCompletion(completion: (user: User?, error: NSError?) -> ()) {
         loginWithCompletion = completion
         TwitterClient.sharedInstance.requestSerializer.removeAccessToken()
-        TwitterClient.sharedInstance.fetchRequestTokenWithPath("oauth/request_token", method: "GET", callbackURL: NSURL(string: "cptwitter://oauth"), scope: nil, success: { (requestToken: BDBOAuth1Credential!) -> Void in
+        TwitterClient.sharedInstance.fetchRequestTokenWithPath("oauth/request_token", method: "GET", callbackURL: NSURL(string: "cptwitterdemo://oauth"), scope: nil, success: { (requestToken: BDBOAuth1Credential!) -> Void in
             print("Got the request token")
             let authURL = NSURL(string: "https://api.twitter.com/oauth/authorize?oauth_token=\(requestToken.token)")
             UIApplication.sharedApplication().openURL(authURL!)

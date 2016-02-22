@@ -2,10 +2,9 @@
 //  User.swift
 //  Twitter
 //
-//  Created by Ali Hadwan on 2/9/16.
+// Created by Ali Hadwan on 2/9/16.
 //  Copyright © 2016 Ali Hadwan. All rights reserved.
 //
-
 
 
 import UIKit
