@@ -30,7 +30,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.estimatedRowHeight = 150
         // Do any additional setup after loading the view.
         
-        tableView.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
+        //tableView.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
         TwitterClient.sharedInstance.homeTimelineWithParams(nil) { (tweets, error) -> () in
             self.tweets = tweets
             self.tableView.reloadData()
@@ -48,7 +48,24 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
              }
         setupInfiniteScrollView()
         
-    }    
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        // 1
+        let nav = self.navigationController?.navigationBar
+        // 2
+        nav?.barStyle = UIBarStyle.Black
+        nav?.tintColor = UIColor.yellowColor()
+        // 3
+        //        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        //        imageView.contentMode = .ScaleAspectFit
+        //        // 4
+        //        let image = UIImage(named: "Apple_Swift_Logo")
+        //        imageView.image = image
+        //        // 5
+        //        navigationItem.titleView = imageView
+    }
+
     func networker_Request(){
         MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         
@@ -69,7 +86,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     
     func  refresher_contorl(){
         self.refrechController = UIRefreshControl()
-        self.refrechController.attributedTitle = NSAttributedString(string: "Hallo")
+        self.refrechController.attributedTitle = NSAttributedString(string: "Hello")
         
         self.refrechController.addTarget(self,action: "refresher:", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(refrechController)

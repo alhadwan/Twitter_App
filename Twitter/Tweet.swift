@@ -19,6 +19,7 @@ class Tweet: NSObject {
     var retweetCount: Int?
     var id: String
     var likeCount: Int?
+    var max_id: Int?
     
     
     init(dictionary: NSDictionary){
@@ -31,8 +32,13 @@ class Tweet: NSObject {
         id = String(dictionary["id"]!)
         retweetCount = dictionary["retweet_count"] as? Int
         likeCount = dictionary["favorite_count"] as? Int
+        
+        let max_id = dictionary["max_id"] as? Int
+        
         let now = NSDate()
         let then = createdAt
+        
+        
         PassedTime = Int(now.timeIntervalSinceDate(then!))
         
         if PassedTime >= 86400{

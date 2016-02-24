@@ -68,36 +68,36 @@ class TweetsTableViewCell: UITableViewCell {
     }
     
     @IBAction func OnTweet(sender: AnyObject) {
-        
-            TwitterClient.sharedInstance.retweet(Int(tweetID)!, params: nil, completion: { (error) ->() in
+        TwitterClient.sharedInstance.retweet(Int(tweetID)!, params: nil, completion: { (error) ->() in
+            
             if self.isRetweetButton {
-        self.RetweetLabel.text = String(self.tweet.retweetCount!)
-        self.RetweetButton.setImage(UIImage(named: "retweet-action-pressed"), forState: UIControlState.Normal)
-            self.isRetweetButton = false
-            self.tweet.retweetCount!--
-           self.RetweetLabel.textColor = UIColor.grayColor()
-                if self.RetweetLabel.text == "0" {
+                self.RetweetLabel.text = String(self.tweet.retweetCount!)
+                self.RetweetButton.setImage(UIImage(named: "retweet-action-pressed"), forState: UIControlState.Normal)
+                self.isRetweetButton = false
+                self.tweet.retweetCount!--
+                self.RetweetLabel.textColor = UIColor.grayColor()
+                if self.RetweetLabel.text == "0"{
                     self.RetweetLabel.hidden = true
                 }
-
-        } else{
-            self.RetweetButton.setImage(UIImage(named: "Retweet"), forState: UIControlState.Normal)
-        
-            self.RetweetLabel.textColor = UIColor(red: 0.0157, green: 0.9176, blue:0.5137, alpha: 1.0)
-            self.isRetweetButton = true
-            self.tweet.retweetCount!++
-   
-        if self.RetweetLabel.text == "0"{
-            self.RetweetLabel.hidden = false
-        }
+            } else{
+                self.RetweetButton.setImage(UIImage(named: "Retweet"), forState: UIControlState.Normal)
+                
+                self.RetweetLabel.textColor = UIColor(red: 0.0157, green: 0.9176, blue:0.5137, alpha: 1.0)
+                self.isRetweetButton = true
+                self.tweet.retweetCount!++
+                if self.RetweetLabel.text == "0"{
+                    self.RetweetLabel.hidden = false
                 }
-                self.RetweetLabel.text = "\(self.tweet.retweetCount!)"
+                
+                
+            }
+            self.RetweetLabel.text = "\(self.tweet.retweetCount!)"
         })
     }
     
     @IBAction func OnLike(sender: AnyObject) {
-        //TwitterClient.sharedInstance.retweet(Int(tweetID)!, params: nil, completion: { (error) ->() in
-         if islikeButton {
+        TwitterClient.sharedInstance.likeTweet(Int(tweetID)!, params: nil, completion: { (error) ->() in
+         if self.islikeButton {
       self.LikesLabel.text = String(self.tweet.likeCount!);
             self.LikeButton.setImage(UIImage(named: "like-action"), forState: UIControlState.Normal)
             self.islikeButton = false
@@ -117,8 +117,10 @@ class TweetsTableViewCell: UITableViewCell {
             }
 
           }
-                self.LikesLabel.text = "\(self.tweet.likeCount!)"
+            self.LikesLabel.text = "\(self.tweet.likeCount!)"
+        })
     }
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
