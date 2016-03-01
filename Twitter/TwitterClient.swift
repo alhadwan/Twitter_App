@@ -7,6 +7,7 @@
 //
 
 
+
 import UIKit
 import BDBOAuth1Manager
 import AFNetworking
@@ -55,6 +56,16 @@ class TwitterClient: BDBOAuth1SessionManager {
         )
     }
     
+    func undoretweet(retweetedTweerID: Int, params: NSDictionary?, completion: (error: NSError?) -> () ){
+        POST("1.1/statuses/retweet/\(retweetedTweerID).json", parameters: params, success: { (operation: NSURLSessionDataTask!, response: AnyObject?) -> Void in
+            completion(error: nil)
+            }, failure: { (operation: NSURLSessionDataTask?, error: NSError!) -> Void in
+                completion(error: error)
+            }
+        )
+    }
+    
+
     
     func openURL(url: NSURL){
         TwitterClient.sharedInstance.fetchAccessTokenWithPath("oauth/access_token", method: "POST", requestToken: BDBOAuth1Credential(queryString: url.query)!, success: { (accessToken: BDBOAuth1Credential!) -> Void in
@@ -73,7 +84,8 @@ class TwitterClient: BDBOAuth1SessionManager {
                 self.loginWithCompletion?(user: nil, error: error)
         }
     }
-
+    
+    
     
     
     func loginWithCompletion(completion: (user: User?, error: NSError?) -> ()) {
@@ -88,6 +100,8 @@ class TwitterClient: BDBOAuth1SessionManager {
                 self.loginWithCompletion?(user: nil, error: error)
         }
     }
+    
+    
     func likeTweet(id: Int, params: NSDictionary?, completion: (error: NSError?) -> () ){
         POST("1.1/favorites/create.json?id=\(id)", parameters: params, success: { (operation: NSURLSessionDataTask!, response: AnyObject?) -> Void in
             completion(error: nil)
@@ -95,7 +109,32 @@ class TwitterClient: BDBOAuth1SessionManager {
                 completion(error: error)
             }
         )}
-    
 
+    
+  
+    
+    
+    func ComposeTweet(escapedTweet: String, params: NSDictionary?, completion: (error: NSError?) -> () ){
+        POST("1.1/statuses/update.json?status=\(escapedTweet)", parameters: params, success: { (operation: NSURLSessionDataTask!, response: AnyObject?) -> Void in
+            print("tweeted: \(escapedTweet)")
+            completion(error: nil)
+            }, failure: { (operation: NSURLSessionDataTask?, error: NSError!) -> Void in
+                print("Couldn't compose")
+                completion(error: error)
+            }
+        )
+    }
+    
+    
+    func ReplyToTweet(escapedTweet: String, statusID: Int, params: NSDictionary?, completion: (error: NSError?) -> () ){
+        POST("1.1/statuses/update.json?in_reply_to_status_id=\(statusID)&status=\(escapedTweet)", parameters: params, success: { (operation: NSURLSessionDataTask!, response: AnyObject?) -> Void in
+            print("tweeted: \(escapedTweet)")
+            completion(error: nil)
+            }, failure: { (operation: NSURLSessionDataTask?, error: NSError!) -> Void in
+                print("Couldn't reply")
+                completion(error: error)
+            }
+        )
+    }
     
 }

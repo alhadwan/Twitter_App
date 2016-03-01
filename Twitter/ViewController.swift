@@ -20,25 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
     }
-//    
-//    override func viewDidAppear(animated: Bool) {
-//        // 1
-//        let nav = self.navigationController?.navigationBar
-//        // 2
-//        nav?.barStyle = UIBarStyle.Black
-//        nav?.tintColor = UIColor.yellowColor()
-//        // 3
-////        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-////        imageView.contentMode = .ScaleAspectFit
-////        // 4
-////        let image = UIImage(named: "Apple_Swift_Logo")
-////        imageView.image = image
-////        // 5
-////        navigationItem.titleView = imageView
-//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -53,7 +35,16 @@ class ViewController: UIViewController {
             if user != nil {
                 self.performSegueWithIdentifier("loginSegue", sender: self)
             } else {
-                // handle error
+                self.performSegueWithIdentifier("loginSegue", sender: self)
+                
+                
+            }
+        }
+        
+        func viewDidAppear(animated: Bool) {
+            if User.currentUser != nil{
+                self.performSegueWithIdentifier("loginSegue", sender: self)
+                
             }
         }
         

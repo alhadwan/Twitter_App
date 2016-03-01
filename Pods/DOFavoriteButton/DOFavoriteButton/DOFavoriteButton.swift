@@ -172,7 +172,7 @@ public class DOFavoriteButton: UIButton {
         self.layer.addSublayer(imageShape)
 
         imageShape.mask = CALayer()
-        //imageShape.mask!.contents = image.CGImage
+        imageShape.mask!.contents = image.CGImage
         imageShape.mask!.bounds = imageFrame
         imageShape.mask!.position = imgCenterPoint
 
